@@ -4,28 +4,48 @@ public class FixedOrderPromotion implements Promotion{		// class implementing in
 	double minimumPrice;
 	double fixedDiscount;
 	
+	/*
+	* Initialising value of bill
+	*/
 	public FixedOrderPromotion(double minBill){
 		setMinimumPrice(minBill);					// Initialising value of bil
 		setFixedDiscount();							// Discount value
 	}
 	
-	public double getMinimumPrice(){				// retrieving minimum price
+	/*
+	* Returns minimum price.
+	*/
+	public double getMinimumPrice(){				
 		return minimumPrice;
 	}
-	
-	public void setMinimumPrice(double price){		// setting minimum price
+	/*
+	* Setting Minimum price
+	*/
+	public void setMinimumPrice(double price){		
 		minimumPrice = price;
 	}
 	
-	public double getFixedDiscount(){				// retrieving fixed discount
+	/*
+	* Getting the fixed discount.
+	*/
+	public double getFixedDiscount(){				
 		return fixedDiscount;
 	}
 	
-	public void setFixedDiscount(){
-		fixedDiscount = 0.05;						// 5% discount is given 
+	/*
+	* Setting the fixed discount.
+	*/
+	public void setFixedDiscount(int disc){
+		this.fixedDiscount = disc;						
 	}
 	
-	public boolean isPromotionApplicable(double billAmount, String userCode){ 			//  Amount and promo code as parameter
+	/*
+	* Returns boolean value.
+	* @params billAmount- Bill value
+	* @params userCode- Code applied by user
+	@ @return Return whether promocode is applicable or not.
+	*/
+	public boolean isPromotionApplicable(double billAmount, String userCode){ 			
 		if(billAmount>=getMinimumPrice()){												// To check whether discount is available or not
 		Calendar cal = Calendar.getInstance();
 		int dayOfMonth = cal.get(Calendar.DAY_OF_MONTH);
