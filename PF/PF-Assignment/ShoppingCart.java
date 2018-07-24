@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class ShoppingCart {
 	
-int total;
+	public int total;
 	
 	List<Product> cart = new ArrayList<Product>();
 	
@@ -26,17 +26,6 @@ int total;
 		return total;
 	}
 	
-	/*void removeItem(int prodId)
-	{
-		for(Product p : cart) {
-			if(p.pId == prodId) {
-				p.remove();
-			}
-		}
-	}
-	*/
-	
-	
 	public static void main(String[] args)
 	{
 		ShoppingCart sc = new ShoppingCart();
@@ -44,7 +33,6 @@ int total;
 		sc.addItem(2, "hanky", 3, 15);
 		sc.display();
 		System.out.println("Total bill is " + sc.bill());
-		//sc.removeItem(2);
 	}
 
 }
