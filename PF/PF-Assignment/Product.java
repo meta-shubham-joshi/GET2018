@@ -1,4 +1,5 @@
 import java.util.*;
+
 public class Product {
 	
 	int pId;
@@ -13,10 +14,5 @@ public class Product {
 		this.quantity = quantity;
 		this.price = price;
 	}
-	
-	/*public void display()
-	{
-		System.out.println(this.pId + "\t" + this.pName + "\t" + this.quantity + "\t" + this.price );
-	}*/
 
 }
