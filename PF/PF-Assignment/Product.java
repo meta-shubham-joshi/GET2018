@@ -2,10 +2,10 @@ import java.util.*;
 
 public class Product {
 	
-	int pId;
-	String pName;
-	int quantity;
-	int price;
+	public int pId;
+	public String pName;
+	public int quantity;
+	public int price;
 
 	public Product(int pId,String pName,int quantity,int price)
 	{
