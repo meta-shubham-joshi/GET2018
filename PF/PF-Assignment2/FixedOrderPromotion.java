@@ -1,6 +1,6 @@
 import java.util.Calendar;
 
-public class FixedOrderPromotion implements Promotion{		// class implementing interface Promotion
+public class FixedOrderPromotion implements Promotion{		
 	double minimumPrice;
 	double fixedDiscount;
 	
@@ -8,8 +8,7 @@ public class FixedOrderPromotion implements Promotion{		// class implementing in
 	* Initialising value of bill
 	*/
 	public FixedOrderPromotion(double minBill){
-		setMinimumPrice(minBill);					// Initialising value of bil
-		setFixedDiscount();							// Discount value
+		setMinimumPrice(minBill);					
 	}
 	
 	/*
