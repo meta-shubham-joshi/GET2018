@@ -2,12 +2,12 @@ import java.util.Calendar;
 
 interface Promotion{
 	enum PromotionEnum{
-		get5("GET05",1,5),free5("FREE05",15,20),less5("LESS05",25,30);  // @params promotion code,start and end date of in a month 
+		get5("GET05",1,5),free5("FREE05",15,20),less5("LESS05",25,30);  
 		String promoCode;
 		double discount;
 		int startDate,endDate;
 		
-		private PromotionEnum(String code,int start,int end){	// enum constructor
+		private PromotionEnum(String code,int start,int end){	
 			promoCode = code;
 			startDate = start;
 			endDate = end;
@@ -27,14 +27,17 @@ interface Promotion{
 	}
 }
 
-public class FixedProductPromotion implements Promotion{		// public class implementing interface Promotion
+public class FixedProductPromotion implements Promotion{		
 	int minQuantity;
 	double minimumPrice;
 	double fixedDiscount;
 	
+	/*
+	*
+	*/
 	public FixedProductPromotion(int minProducts, double minBill){
-		setMinimumPrice(minProducts,minBill);					// setting up minimum price and no of products limit to avail discount
-		setFixedDiscount();										// also declaring discount percent
+		setMinimumPrice(minProducts,minBill);				
+		setFixedDiscount();										
 	}
 	
 	public double getMinQuantity(){
@@ -54,11 +57,11 @@ public class FixedProductPromotion implements Promotion{		// public class implem
 		return fixedDiscount;
 	}
 	
-	public void setFixedDiscount(){
-		fixedDiscount = 0.05;	// 5% discount is given 
+	public void setFixedDiscount(int disc){
+		this.fixedDiscount = disc;	
 	}
 	
-	public boolean isPromotionApplicable(int productInBill,double billAmount, String userCode){ // @params no of products in bill, total amount, promo code entered
+	public boolean isPromotionApplicable(int productInBill,double billAmount, String userCode){ 
 		Calendar cal = Calendar.getInstance();													// @return boolean variable to show discount availability
 		int dayOfMonth = cal.get(Calendar.DAY_OF_MONTH);
 		if(billAmount>=getMinimumPrice())
