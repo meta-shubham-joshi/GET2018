@@ -1,8 +1,8 @@
 import java.util.Calendar;
 
 public class FixedOrderPromotion implements Promotion{		
-	double minimumPrice;
-	double fixedDiscount;
+	public double minimumPrice;
+	public double fixedDiscount;
 	
 	/*
 	* Initialising value of bill
