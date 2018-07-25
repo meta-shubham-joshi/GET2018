@@ -28,39 +28,57 @@ interface Promotion{
 }
 
 public class FixedProductPromotion implements Promotion{		
-	int minQuantity;
-	double minimumPrice;
-	double fixedDiscount;
+	public int minQuantity;
+	public double minimumPrice;
+	public double fixedDiscount;
 	
 	/*
-	*
+	* Setting up the value of minimum products and minimum bill amount.
 	*/
 	public FixedProductPromotion(int minProducts, double minBill){
 		setMinimumPrice(minProducts,minBill);				
 		setFixedDiscount();										
 	}
 	
+	/*
+	* Getting the minimum quantity value.
+	*/
 	public double getMinQuantity(){
 		return minQuantity;
 	}
 	
+	/*
+	* Getting the minimum price value.
+	*/
 	public double getMinimumPrice(){
 		return minimumPrice;
 	}
 	
+	/*
+	* Setting the minimum quantity and price value.
+	*/
 	public void setMinimumPrice(int quantity, double price){
 		minQuantity = quantity;
 		minimumPrice = price;
 	}
 	
+	/*
+	* Getting the fixed discount value.
+	*/
 	public double getFixedDiscount(){
 		return fixedDiscount;
 	}
 	
+	/*
+	* Setting the fixed discount value.
+	*/
 	public void setFixedDiscount(int disc){
 		this.fixedDiscount = disc;	
 	}
 	
+	/*
+	* Returns whether promocode is applicable or not.
+	*/
 	public boolean isPromotionApplicable(int productInBill,double billAmount, String userCode){ 
 		Calendar cal = Calendar.getInstance();													// @return boolean variable to show discount availability
 		int dayOfMonth = cal.get(Calendar.DAY_OF_MONTH);
