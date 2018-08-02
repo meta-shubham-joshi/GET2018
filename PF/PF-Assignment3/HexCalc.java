@@ -42,7 +42,7 @@ public class HexCalc implements ArithematicHex{
 		return hex;
 	}
 	
-	public String add(String n1,String n2){
+	public String add(String n1, String n2){
 		
 		int val1 = hexadecToDecimal(n1);
 		int val2 = hexadecToDecimal(n2);
@@ -51,7 +51,7 @@ public class HexCalc implements ArithematicHex{
 		return res;
 	}
 	
-	public String sub(String n1,String n2){
+	public String sub(String n1, String n2){
 		
 		int val1 = hexadecToDecimal(n1);
 		int val2 = hexadecToDecimal(n2);
@@ -60,7 +60,7 @@ public class HexCalc implements ArithematicHex{
 		return res;
 	}
 	
-	public String mul(String n1,String n2){
+	public String mul(String n1, String n2){
 		
 		int val1 = hexadecToDecimal(n1);
 		int val2 = hexadecToDecimal(n2);
@@ -69,7 +69,7 @@ public class HexCalc implements ArithematicHex{
 		return res;
 	}
 	
-	public void div(String n1,String n2){
+	public void div(String n1, String n2){
 		
 		int val1 = hexadecToDecimal(n1);
 		int val2 = hexadecToDecimal(n2);
@@ -86,7 +86,7 @@ public class HexCalc implements ArithematicHex{
 		}
 	}
 	
-	public void comp(String n1,String n2){
+	public void comp(String n1, String n2){
 		
 		int result = n1.compareTo(n2);
 		if (result < 0) {
