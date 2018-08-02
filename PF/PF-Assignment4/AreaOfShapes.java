@@ -8,19 +8,17 @@ public class AreaOfShapes {
 	 * @params height-Contain height of triangle.
 	 * @return float returns area of triangle.
 	 */
-	public double areaOfTriangle(double width,double height)
-	{
+	public double areaOfTriangle(double width, double height){
+		
 		double area=0;
 		try{
 			if(width<0 || height<0)
 			{
 				throw new Exception();
 			}
-				
 			
 			area = 0.5*width*height;
-		}
-		catch(Exception e){
+		}catch(Exception e){
 			System.out.println("Width or Height of a traingle cannot be negative!..");
 		}
 		return area;
@@ -32,19 +30,16 @@ public class AreaOfShapes {
 	 * @params height-Contain height of rectangle.
 	 * @return float returns area of rectangle.
 	 */
-	public double areaOfRectangle(double width,double height)
-	{
+	public double areaOfRectangle(double width, double height){
+		
 		double area=0;
 		try{
 			if(width<0 || height<0)
 			{
 				throw new Exception();
 			}
-				
-			
 			area = width*height;
-		}
-		catch(Exception e){
+		}catch(Exception e){
 			System.out.println("Width or Height of a rectangle cannot be negative!..");
 		}
 		return area;
@@ -56,8 +51,8 @@ public class AreaOfShapes {
 	 * @params width-Contain width of square
 	 * @return float returns area of square
 	 */
-	public double areaOfSquare(double width)
-	{
+	public double areaOfSquare(double width){
+		
 		double area=0;
 		try{
 			if(width<0)
@@ -66,8 +61,7 @@ public class AreaOfShapes {
 			}
 			
 			area = width*width;
-		}
-		catch(Exception e){
+		}catch(Exception e){
 			System.out.println("Width of a square cannot be negative!..");
 		}
 		return area;
@@ -80,8 +74,7 @@ public class AreaOfShapes {
 	 * @params width-Contain width of circle.
 	 * @return float returns area of circle.
 	 */
-	public double areaOfCircle(double radius)
-	{
+	public double areaOfCircle(double radius){
 		double area=0;
 		try{
 			if(radius<0)
@@ -90,8 +83,7 @@ public class AreaOfShapes {
 			}
 			area = 3.14*radius*radius;
 			
-		}
-		catch(Exception e){
+		}catch(Exception e){
 			System.out.println("Radius of a circle cannot be negative!..");
 		}
 		return area;
