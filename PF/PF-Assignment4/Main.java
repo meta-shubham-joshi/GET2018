@@ -37,12 +37,14 @@ public class Main {
 		        str2 = strop.reverseStr(str1);       
 			    System.out.println("Reversed String is:");
 		        System.out.println(str2);
+				break;
 		        
 		case 3: System.out.println("Enter String1: ");
 				str1=sc.next();
 				str2 = strop.changeCase(str1);       
 				System.out.println("Reversed String is:");
 				System.out.println(str2);
+				break;
 				
 		case 4: System.out.println("Enter String1: ");
 				sc.nextLine();
@@ -50,6 +52,9 @@ public class Main {
 				str2 = strop.largestWord(str1);       
 				System.out.println("Largest word in string is:");
 				System.out.println(str2);
+				break;
+				
+		default : System.out.println("Wrong operation is choosen....");
 		}
 		
 	}
