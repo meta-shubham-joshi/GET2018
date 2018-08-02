@@ -114,7 +114,7 @@ public class JobScheduler {
 			System.out.println(jobs.turn_Around_Time);
 		}
 		 
-		float avg_time = avgWaitingTime(obj,pro);
+		float avg_time = avgWaitingTime(obj, pro);
 		System.out.println("Average waiting time: ");
 		System.out.println(avg_time);
 		
