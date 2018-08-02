@@ -5,21 +5,19 @@ import java.lang.*;
 
 public class HexCalc implements ArithematicHex{
 	
-	public int hexadecToDecimal(String str)
-	{
+	public int hexadecToDecimal(String str){
 		int v=0;
 		int total=0;
 		int pow=0;
 		
 		str = str.toUpperCase();
 		
-		for(int i=str.length()-1 ; i>=0; i--)
-		{
+		for(int i=str.length()-1 ; i>=0; i--){
+			
 			char c = str.charAt(i);
 			if(c>='0' && c<='9')
 				v= c - '0';
-			else if(c>='A' && c<='F')
-			{
+			else if(c>='A' && c<='F'){
 				v = 10 + (c-'A');
 			}
 			
@@ -29,15 +27,14 @@ public class HexCalc implements ArithematicHex{
 		return total;
 	}
 	
-	public String decToHexaDec(int num)
-	{
+	public String decToHexaDec(int num){
+		
 		int rem;
 		String hex="";
 		
 		char hexChars[] = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
 		
-		while(num>0)
-		{
+		while(num>0){
 			rem = num%16;
 			hex = hexChars[rem] + hex;
 			num = num/16;
@@ -45,38 +42,35 @@ public class HexCalc implements ArithematicHex{
 		return hex;
 	}
 	
-	public String add(String n1,String n2)
-	{
+	public String add(String n1,String n2){
+		
 		int val1 = hexadecToDecimal(n1);
 		int val2 = hexadecToDecimal(n2);
 		int result = val1 + val2;
 		String res = decToHexaDec(result);
 		return res;
-		
 	}
 	
-	public String sub(String n1,String n2)
-	{
+	public String sub(String n1,String n2){
+		
 		int val1 = hexadecToDecimal(n1);
 		int val2 = hexadecToDecimal(n2);
 		int result = Math.abs(val1 - val2);
 		String res = decToHexaDec(result);
 		return res;
-		
 	}
 	
-	public String mul(String n1,String n2)
-	{
+	public String mul(String n1,String n2){
+		
 		int val1 = hexadecToDecimal(n1);
 		int val2 = hexadecToDecimal(n2);
 		int result = val1 * val2;
 		String res = decToHexaDec(result);
 		return res;
-		
 	}
 	
-	public void div(String n1,String n2)
-	{
+	public void div(String n1,String n2){
+		
 		int val1 = hexadecToDecimal(n1);
 		int val2 = hexadecToDecimal(n2);
 		
@@ -90,13 +84,10 @@ public class HexCalc implements ArithematicHex{
 		catch (ArithmeticException e) {
 	         System.out.println ("Can't be divided by Zero"+e);
 		}
-		
-	
-		
 	}
 	
-	public void comp(String n1,String n2)
-	{
+	public void comp(String n1,String n2){
+		
 		int result = n1.compareTo(n2);
 		if (result < 0) {
 		    System.out.println("n1 is lesser than n2");
@@ -106,12 +97,11 @@ public class HexCalc implements ArithematicHex{
 		}
 		else {
 			System.out.println("n1 is equal to n2");
-		}
-		
+		}	
 	}
 	
-	public static void main(String args[])
-	{
+	public static void main(String args[]){
+		
 		HexCalc obj = new HexCalc();
 		
 		Scanner sc = new Scanner(System.in);
@@ -136,7 +126,7 @@ public class HexCalc implements ArithematicHex{
 				ans = obj.add(n1,n2);
 				System.out.println("Addition of the numbers is:");
 				System.out.println(ans);
-				
+				break;
 				
 		case 2: System.out.println("Enter the first number:");
 				 n1= sc.next();
@@ -145,7 +135,8 @@ public class HexCalc implements ArithematicHex{
 				ans = obj.sub(n1,n2);
 				System.out.println("Subtraction of the numbers is:");
 				System.out.println(ans);
-		
+				break;
+				
 		case 3: System.out.println("Enter the first number:");
 				n1= sc.next();
 				System.out.println("Enter the second number:");
@@ -153,23 +144,24 @@ public class HexCalc implements ArithematicHex{
 				ans = obj.mul(n1,n2);
 				System.out.println("Multiplication of the numbers is:");
 				System.out.println(ans);
+				break;
 		
 		case 4: System.out.println("Enter the first number:");
 				n1= sc.next();
 				System.out.println("Enter the second number:");
 				n2= sc.next();
 				obj.div(n1, n2);
+				break;
 				
 		case 5: System.out.println("Enter the first number:");
 				n1= sc.next();
 				System.out.println("Enter the second number:");
 				n2= sc.next();
 				obj.comp(n1,n2);
+				break;
 		
-		
+		default : System.out.println("Operation number choosen is wrong!!!!....");
 		}
-		
 	}
-
 }
 
