@@ -1,10 +1,14 @@
 import java.util.Scanner;
 
-
+/**
+ * 
+ * @author shubhamjoshi
+ *
+ */
 public class MainArea {
 	
-	public static void main(String args[])
-	{
+	public static void main(String args[]){
+		
 		AreaOfShapes ma = new AreaOfShapes();
 		
 		double width;
@@ -21,8 +25,8 @@ public class MainArea {
 		Scanner sc = new Scanner(System.in);
 		int x = sc.nextInt();
 		
-		switch(x)
-		{
+		switch(x){
+		
 		case 1: System.out.println("Enter width: ");
 				width=sc.nextInt();
 				System.out.println("Enter height: ");
@@ -54,6 +58,8 @@ public class MainArea {
 				System.out.println("Area of circle is:");
 				System.out.printf("%.2f",ans);
 				break;
+				
+		default: System.out.println("Invalid Operation selected!!..");
 
 		}
 }
