@@ -2,10 +2,10 @@
 import java.util.Scanner;
 import java.lang.*;
 
+
 public class HexCalc implements ArithematicHex{
 	
 	public int hexadecToDecimal(String str){
-		
 		int v=0;
 		int total=0;
 		int pow=0;
@@ -15,13 +15,12 @@ public class HexCalc implements ArithematicHex{
 		for(int i=str.length()-1 ; i>=0; i--){
 			
 			char c = str.charAt(i);
-			if(c>='0' && c<='9'){
-		
+			if(c>='0' && c<='9')
 				v= c - '0';
-			}else if(c>='A' && c<='F'){
+			else if(c>='A' && c<='F'){
 				v = 10 + (c-'A');
 			}
-		
+			
 			total += v* Math.pow(16,pow);
 			pow++;
 		}
@@ -43,7 +42,7 @@ public class HexCalc implements ArithematicHex{
 		return hex;
 	}
 	
-	public String add(String n1,String n2){
+	public String add(String n1, String n2){
 		
 		int val1 = hexadecToDecimal(n1);
 		int val2 = hexadecToDecimal(n2);
@@ -81,12 +80,14 @@ public class HexCalc implements ArithematicHex{
 			System.out.println("Division of the numbers is:");
 			System.out.println(res);
 			
-		}catch (ArithmeticException e) {
+		}
+		catch (ArithmeticException e) {
 	         System.out.println ("Can't be divided by Zero"+e);
 		}
 	}
 	
 	public void comp(String n1, String n2){
+		
 		int result = n1.compareTo(n2);
 		if (result < 0) {
 		    System.out.println("n1 is lesser than n2");
@@ -96,12 +97,11 @@ public class HexCalc implements ArithematicHex{
 		}
 		else {
 			System.out.println("n1 is equal to n2");
-		}
-		
+		}	
 	}
 	
-	public static void main(String args[])
-	{
+	public static void main(String args[]){
+		
 		HexCalc obj = new HexCalc();
 		
 		Scanner sc = new Scanner(System.in);
@@ -136,7 +136,7 @@ public class HexCalc implements ArithematicHex{
 				System.out.println("Subtraction of the numbers is:");
 				System.out.println(ans);
 				break;
-		
+				
 		case 3: System.out.println("Enter the first number:");
 				n1= sc.next();
 				System.out.println("Enter the second number:");
@@ -159,11 +159,9 @@ public class HexCalc implements ArithematicHex{
 				n2= sc.next();
 				obj.comp(n1,n2);
 				break;
-				
-		default :System.out.println("Wrong operation is choosen....";
-		}
 		
+		default : System.out.println("Operation number choosen is wrong!!!!....");
+		}
 	}
-
 }
 
