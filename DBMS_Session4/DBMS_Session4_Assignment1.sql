@@ -16,7 +16,6 @@ END $$
 
 SELECT calculate_No_Of_Orders_In_Month(08, 2018);
 
-
 # SQL Query for creating a function to return month in a year having maximum orders. Year will be input parameter.
 
 DELIMITER $$
