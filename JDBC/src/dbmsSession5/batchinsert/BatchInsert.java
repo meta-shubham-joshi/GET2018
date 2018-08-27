@@ -22,6 +22,7 @@ public class BatchInsert {
 
 		try {
 			JDBCConnection jdbcconnection = new JDBCConnection();
+			// For security reasons Password field is empty.You have to enter the password of your database.
 			Connection con = jdbcconnection.getDatabaseConnection("storefront",
 					"root", "");
 			try {
