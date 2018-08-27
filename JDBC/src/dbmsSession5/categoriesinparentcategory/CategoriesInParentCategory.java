@@ -32,12 +32,14 @@ public class CategoriesInParentCategory {
 		PreparedStatement preparedStatement = connection
 				.prepareStatement(queryToGetChildCategoryCount);
 		ResultSet resultSet = preparedStatement.executeQuery();
-
-		while (resultSet.next()) {
-			CategoriesInParentCategoryPOJO
+		
+		if(resultset.next()){
+			do{
+				CategoriesInParentCategoryPOJO
 					.addToResultList(new CategoriesInParentCategoryPOJO(
 							resultSet.getString("Category_Name"), resultSet
 									.getInt("count_Of_Child")));
+			}while (resultSet.next())
 		}
 		connection.close();
 		return CategoriesInParentCategoryPOJO.getResultList();
