@@ -22,6 +22,7 @@ public class DeleteProduct {
 		int result = 0;
 		try {
 			JDBCConnection jdbcconnection = new JDBCConnection();
+			// For security reasons i have left the password field as empty. So, enter your database password.
 			Connection connection = jdbcconnection.getDatabaseConnection(
 					"storefront", "root", "");
 
