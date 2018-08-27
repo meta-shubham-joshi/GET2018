@@ -40,16 +40,12 @@ public class OrderDetails {
 		ResultSet resultSet = preparedStatement.executeQuery();
 
 		if (resultSet.next()) {
-			resultSet.previous();
-
-			while (resultSet.next()) {
-
+			do{
 				OrderDetailsPOJO.addToResultList(new OrderDetailsPOJO(resultSet
 						.getString("Order_Id"), resultSet
 						.getString("Order_Date"), resultSet
 						.getString("Order_Amount")));
-
-			}
+			}while (resultSet.next()) 
 		} else {
 			System.out.println("No Orders information for this User !\n");
 		}
