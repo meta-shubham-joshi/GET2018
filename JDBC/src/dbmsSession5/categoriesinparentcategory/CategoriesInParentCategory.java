@@ -21,6 +21,7 @@ public class CategoriesInParentCategory {
 	 */
 	public List<CategoriesInParentCategoryPOJO> getChildCategoryCount()
 			throws SQLException {
+		// For security reasons password field is empty. You have to enter the password of your database.
 		connection = JDBCConnection.getDatabaseConnection("StoreFront", "root",
 				"");
 
