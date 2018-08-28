@@ -55,37 +55,12 @@ WHERE DATEDIFF(NOW(),o.Order_Date) BETWEEN 1 AND 90);
 
 # SQL Query for given a category search keyword, display all the Products present in this category/categories. 
 
-DELIMITER //
-CREATE PROCEDURE get_tr(IN Category_Name VARCHAR(30))
- BEGIN
- DECLARE id int;
- DECLARE Parent_id int;
- 
- SELECT Category_Id into id 
- FROM Category WHERE Category_Name = Category_Name;
- 
- SELECT Parent_Category into Parent_id 
- FROM Category WHERE Category_id = id;
- 
- create TEMPORARY  table IF NOT EXISTS temp_table as (select Product_Id from Product_Category where 1=0);
- truncate table temp_table;
- 
-
- WHILE Parent_id <> 0 DO
-   insert into temp_table select Product_Id from Product_Category WHERE Category_Id=Parent_id;
-   
-   SELECT Parent_Category into Parent_id 
-   FROM Category WHERE Category_id = id;
- 
-   SET Parent = child_id;
-   SET child_id=0;
-   SELECT Parent_Category into child_id
-   FROM Category WHERE Category_Id=prev_id;
- END WHILE;
- END //
-DELIMITER ; 
- CALL get_tr(5);
- select * from temp_table;
+SELECT c.Category_Id,c.Category_Name,COUNT(pc.Product_Id) as Number_Of_Products
+FROM Category c
+LEFT JOIN
+Product_Category pc
+ON c.category_Id = pc.Category_Id
+GROUP BY (c.Category_Name) HAVING COUNT(pc.Product_Id)>=0;
 
 # SQL Query to display top 10 Items which were cancelled most.
 INSERT INTO Product_In_Order_Type(Order_Id,Product_Id,Quantity,Status) values
