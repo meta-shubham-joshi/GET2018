@@ -29,7 +29,9 @@ public class OrderDetails {
 
 		connection = JDBCConnection.getDatabaseConnection("StoreFront", "root",
 				"");
-
+		
+		private List<OrderDetailsPOJO> orderdetailsresultlist = new ArrayList<OrderDetailsPOJO>();
+		
 		String queryToGetOrderDetails = "SELECT Order_Id, Order_Date, Order_Amount"
 				+ " FROM User_Order WHERE (User_Id="
 				+ userId
@@ -41,7 +43,8 @@ public class OrderDetails {
 
 		if (resultSet.next()) {
 			do{
-				OrderDetailsPOJO.addToResultList(new OrderDetailsPOJO(resultSet
+				
+				orderdetailsresultlist.add(new OrderDetailsPOJO(resultSet
 						.getString("Order_Id"), resultSet
 						.getString("Order_Date"), resultSet
 						.getString("Order_Amount")));
@@ -50,6 +53,6 @@ public class OrderDetails {
 			System.out.println("No Orders information for this User !\n");
 		}
 		connection.close();
-		return OrderDetailsPOJO.getOrderDetailsResultList();
+		return orderdetailsresultlist;
 	}
 }
