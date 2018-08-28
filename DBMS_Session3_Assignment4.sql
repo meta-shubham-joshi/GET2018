@@ -3,14 +3,14 @@ SHOW Tables;
 
 # SQL Query to consider a form where providing a Zip Code populates associated City and State. 
 CREATE TABLE Cities (
-    ID int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     City varchar(55),
     State varchar(55)
 );
 CREATE TABLE ZipCodes (
     ZipCode int NOT NULL PRIMARY KEY,
     Area varchar(100),
-    City_Code int,
+    City_Code INT,
     FOREIGN KEY (City_Code) REFERENCES Cities(ID)
 );
 
