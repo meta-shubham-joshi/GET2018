@@ -9,7 +9,7 @@ import java.util.List;
  */
 public class OrderDetailsPOJO {
 
-	private static List<OrderDetailsPOJO> orderdetailsresultlist = new ArrayList<OrderDetailsPOJO>();
+	
 
 	private String Order_Id;
 	private String Order_Date;
@@ -20,22 +20,6 @@ public class OrderDetailsPOJO {
 		this.Order_Id = Order_Id;
 		this.Order_Date = Order_Date;
 		this.Order_Amount = Order_Amount;
-	}
-
-	/**
-	 * Method to add result to the list
-	 * @param list- input list to be added
-	 */
-	public static void addToResultList(OrderDetailsPOJO list) {
-		orderdetailsresultlist.add(list);
-	}
-
-	/**
-	 * Method to get order details
-	 * @return the list
-	 */
-	public static List<OrderDetailsPOJO> getOrderDetailsResultList() {
-		return orderdetailsresultlist;
 	}
 
 	/**
