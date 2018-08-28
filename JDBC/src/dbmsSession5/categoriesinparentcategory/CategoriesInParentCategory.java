@@ -24,20 +24,21 @@ public class CategoriesInParentCategory {
 		// For security reasons password field is empty. You have to enter the password of your database.
 		connection = JDBCConnection.getDatabaseConnection("StoreFront", "root",
 				"");
-
+		
+		private List<CategoriesInParentCategoryPOJO> resultList = new ArrayList<CategoriesInParentCategoryPOJO>();
+		
 		String queryToGetChildCategoryCount = "SELECT c.Category_Name, Count(c1.Category_Id) AS count_Of_Child FROM category c "
 				+ "LEFT JOIN category c1 ON c.category_Id=c1.Parent_category "
 				+ "WHERE c.Parent_category=0 GROUP BY c.category_Name "
 				+ "ORDER BY c.Category_Name";
-
+		
 		PreparedStatement preparedStatement = connection
 				.prepareStatement(queryToGetChildCategoryCount);
 		ResultSet resultSet = preparedStatement.executeQuery();
 		
 		if(resultset.next()){
 			do{
-				CategoriesInParentCategoryPOJO
-					.addToResultList(new CategoriesInParentCategoryPOJO(
+				resultlist.add(new CategoriesInParentCategoryPOJO(
 							resultSet.getString("Category_Name"), resultSet
 									.getInt("count_Of_Child")));
 			}while (resultSet.next())
