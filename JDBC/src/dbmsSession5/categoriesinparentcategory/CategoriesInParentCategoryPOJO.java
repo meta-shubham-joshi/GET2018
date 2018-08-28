@@ -8,30 +8,13 @@ import java.util.List;
  * Created on August 21, 2018
  */
 public class CategoriesInParentCategoryPOJO {
-	private static List<CategoriesInParentCategoryPOJO> resultList = new ArrayList<CategoriesInParentCategoryPOJO>();
-
+	
 	private String categoryName;
 	private int categoryCount;
 
 	public CategoriesInParentCategoryPOJO(String categoryName, int categoryCount) {
 		this.categoryName = categoryName;
 		this.categoryCount = categoryCount;
-	}
-
-	/**
-	 * Method to get the result list.
-	 * @return the list
-	 */
-	public static List<CategoriesInParentCategoryPOJO> getResultList() {
-		return resultList;
-	}
-
-	/**
-	 * Method to add list.
-	 * @param result - list to be added
-	 */
-	public static void addToResultList(CategoriesInParentCategoryPOJO result) {
-		resultList.add(result);
 	}
 
 	/**
