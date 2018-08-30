@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" id="WebApp_ID" version="2.4">
+  <display-name>AddEmployees</display-name>
+  <servlet>
+    <display-name>AddEmployees</display-name>
+    <servlet-name>AddEmployeeDetail</servlet-name>
+    <servlet-class>com.servlets.AddEmployeeDetail</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddEmployeeDetail</servlet-name>
+    <url-pattern>/addemployee</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <display-name>ShowEmployee</display-name>
+    <servlet-name>ShowEmployee</servlet-name>
+    <servlet-class>com.servlets.ShowAllEmployee</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShowEmployee</servlet-name>
+    <url-pattern>/ShowAllEmployee</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <display-name>SearchEmployee</display-name>
+    <servlet-name>SearchEmployee</servlet-name>
+    <servlet-class>com.servlets.SearchEmployeeDetails</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SearchEmployee</servlet-name>
+    <url-pattern>/searchemployee</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <display-name>UpdateEmp</display-name>
+    <servlet-name>UpdateDetails</servlet-name>
+    <servlet-class>com.servlets.UpdateDetails</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateDetails</servlet-name>
+    <url-pattern>/UpdateDetails</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <display-name>UpdateEmployeeDetails</display-name>
+    <servlet-name>UpdateEmployeeDetails</servlet-name>
+    <servlet-class>com.servlets.UpdateEmployee</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateEmployeeDetails</servlet-name>
+    <url-pattern>/UpdateEmployeeDetails</url-pattern>
+  </servlet-mapping>
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+</web-app>
