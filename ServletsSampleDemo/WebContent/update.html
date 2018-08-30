@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="ISO-8859-1">
+<script src="validation.js" type="text/javascript"></script>
+<title>Update Employee Detail</title>
+
+</head>
+<body align="center">
+
+	<h1 style="text-align:center;">UPDATE EMPLOYEE DETAILS</h1>
+	<form action="updateemployee" id="updateemployeeform">
+		<table align="center">
+			<tr>
+				<td>FirstName</td>
+				<td><input type="text" name="FirstName" id="firstname" /></td>
+			</tr>
+			<tr>
+				<td>LastName</td>
+				<td><input type="text" name="LastName" id="lastname" /></td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td><input type="email" name="Email" id="email" readonly/></td>
+			</tr>
+			<tr>
+				<td>Age</td>
+				<td><input type="number" name="Age" id="age" /></td>
+			</tr>
+
+			<tr>
+				<td><input type="button" value="UPDATE"
+					onclick="validate()" /></td>
+			</tr>
+
+		</table>
+	</form>
+
+</body>
+</html>
