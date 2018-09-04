@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" id="WebApp_ID" version="2.4">
+  <display-name>User</display-name>
+  <servlet>
+    <display-name>UserInfo</display-name>
+    <servlet-name>UserDetail</servlet-name>
+    <servlet-class>com.controller.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserDetail</servlet-name>
+    <url-pattern>/Registration</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <display-name>LoginInfo</display-name>
+    <servlet-name>LoginUser</servlet-name>
+    <servlet-class>com.controller.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginUser</servlet-name>
+    <url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <display-name>FilterInfo</display-name>
+    <filter-name>LoginFilter</filter-name>
+    <filter-class>com.Filter.ApplicationFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>LoginFilter</filter-name>
+    <url-pattern>/Login</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <display-name>UpdateInfo</display-name>
+    <servlet-name>UpdateUserInfo</servlet-name>
+    <servlet-class>com.controller.EditServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateUserInfo</servlet-name>
+    <url-pattern>/EditServ</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <display-name>FilterUpdateInfo</display-name>
+    <filter-name>EditFilter</filter-name>
+    <filter-class>com.Filter.ApplicationFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>EditFilter</filter-name>
+    <url-pattern>/EditServ</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <display-name>FriendsInfo</display-name>
+    <servlet-name>FriendsUserInfo</servlet-name>
+    <servlet-class>com.controller.FriendsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FriendsUserInfo</servlet-name>
+    <url-pattern>/FriendsServlet</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <display-name>FilterUpdateInfo</display-name>
+    <filter-name>UpdateFilter</filter-name>
+    <filter-class>com.Filter.ApplicationFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>UpdateFilter</filter-name>
+    <url-pattern>/FriendsServlet</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <display-name>LogOutUser</display-name>
+    <servlet-name>Logout</servlet-name>
+    <servlet-class>com.controller.LogOutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Logout</servlet-name>
+    <url-pattern>/LogOutServ</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <display-name>FilterUpdateInfo</display-name>
+    <filter-name>LogOutFilter</filter-name>
+    <filter-class>com.Filter.ApplicationFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>LogOutFilter</filter-name>
+    <url-pattern>/LogOutServ</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <display-name>EditServletFinally</display-name>
+    <servlet-name>EditServletFinals</servlet-name>
+    <servlet-class>com.controller.EditServletFinal</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EditServletFinals</servlet-name>
+    <url-pattern>/EditServletFinalPath</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <display-name>FilterServletFinally</display-name>
+    <filter-name>EditInfoFilter</filter-name>
+    <filter-class>com.Filter.ApplicationFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>EditInfoFilter</filter-name>
+    <url-pattern>/EditServletFinalPath</url-pattern>
+  </filter-mapping>
+  
+  
+  
+   <servlet>
+    <display-name>UploadingImg</display-name>
+    <servlet-name>UploadImage</servlet-name>
+    <servlet-class>com.controller.ImageUploadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UploadImage</servlet-name>
+    <url-pattern>/UploadImageOfUser</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <display-name>UploadingImageFilter</display-name>
+    <filter-name>UploadImageFilter</filter-name>
+    <filter-class>com.Filter.ApplicationFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>UploadImageFilter</filter-name>
+    <url-pattern>/UploadImageOfUser</url-pattern>
+  </filter-mapping>
+  
+  
+  
+  
+  
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+</web-app>
