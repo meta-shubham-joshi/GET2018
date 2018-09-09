@@ -22,8 +22,7 @@ public class QueueArrayImp {
 			return 1;
 		}
 
-		throw new ArrayIndexOutOfBoundsException(
-				"Queue is full so element cannot be added!!..");
+		throw new ArrayIndexOutOfBoundsException("Queue is full so element cannot be added!!..");
 
 	}
 
@@ -39,8 +38,7 @@ public class QueueArrayImp {
 				queueArr[i] = queueArr[i + 1];
 			}
 			rear--;
-			System.out
-					.println("Element is successfully removed from the queue!!..");
+			System.out.println("Element is successfully removed from the queue!!..");
 			return 1;
 		}
 
@@ -79,14 +77,14 @@ public class QueueArrayImp {
 		System.out.println("Queue is not full!!..");
 		return false;
 	}
-	
+
 	/*
 	 * Displaying the queue values.
 	 */
 	public void display() {
 
-		for (int i = 0; i <rear; i++) {
-			System.out.println("Element " + i + " : " +  queueArr[i]);
+		for (int i = 0; i < rear; i++) {
+			System.out.println("Element " + i + " : " + queueArr[i]);
 		}
 		System.out.println("**************************");
 		System.out.println("                ");
