@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee Details</title>
+</head>
+<body>
+
+<div class="container">
+    <div th:if="${not #lists.isEmpty(employees)}">
+        <h2>Employee Details</h2>
+        <table class="table table-striped">
+            <tr>
+                <th>EmployeeCode</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>DOB</th>
+                <th>Gender </th>
+                <th>PrimaryContactNumber</th>
+                <th>SecondaryContactNumber</th>
+                <th>EmailId</th>
+                <th>SkypeId</th>
+                <th>ProfilePicture</th>
+                <th>Password</th>
+                <th>Enabled</th>
+                <th>Edit Details</th>
+            </tr>
+            <tr th:each="employee : ${employees}">
+                <td th:text="${employee.empCode}"></td>
+                <td th:text="${employee.firstName}"></td>
+                <td th:text="${employee.lastName}"></td>
+                <td th:text="${employee.dob}"></td>
+                <td th:text="${employee.gender}"></td>
+                <td th:text="${employee.primary_contact_number}"></td>
+                <td th:text="${employee.secondary_contact_number}"></td>
+                <td th:text="${employee.email_id}"></td>
+                <td th:text="${employee.skype_id}"></td>
+                <td th:text="${employee.profile_picture}"></td>
+                <td th:text="${employee.password}"></td>
+                <td th:text="${employee.enabled}"></td>
+                <td><a th:href="@{'../admin/employee/edit?empCode=' + ${employee.empCode}}" class="btn btn-default">Edit</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+</body>
+</html>
