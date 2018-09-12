@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Edit Job Details</title>
+</head>
+<body>
+
+<div>
+		<form th:object="${JobDetails}" th:action="@{../employees/edit}" method="post">
+			
+			<br>
+			 <label>EmployeeCode:</label> 
+			 <input type="text" th:field="*{emp_code}" /> 
+				<br>
+			<label>DateOfJoining:</label> 
+			<input type="date"  th:field="*{date_of_joining}" /> 
+				<br>
+			<label>TotalExp:</label> 
+			<input type="text"  th:field="*{total_exp}" /> 
+			<br>
+			 <label>JobCode:</label> 
+			 <input type="text" th:field="*{job_code}" /> 
+				<br>
+			<br>
+			 <label>ReportingManager:</label> 
+			 <input type="text" th:field="*{reporting_mgr}" /> 
+				<br>
+			<br>
+			 <label>TeamLead:</label> 
+			 <input type="text" th:field="*{team_lead}" /> 
+				<br>
+			<br>
+			 <label>CurrentProjectId:</label> 
+			 <input type="text" th:field="*{curr_proj_id}" /> 
+				<br>
+				
+			<button type="submit" class="btn btn-primary">Save</button>
+
+		</form>
+	</div>
+
+
+
+</body>
+</html>
