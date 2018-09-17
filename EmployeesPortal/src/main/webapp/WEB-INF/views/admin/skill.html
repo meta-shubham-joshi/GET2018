@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>ADD SKILLS</title>
+</head>
+<body>
+
+	<div>
+		<form th:object="${skill}" th:action="@{../skills}" method="post">
+			
+			<label>Id:</label> 
+			<input type="text"  th:field="*{id}" />
+			<br>
+			 <label>Name:</label> 
+			 <input type="text" th:field="*{name}" /> 
+				<br>
+			<button type="submit" class="btn btn-primary">Save</button>
+		</form>
+	</div>
+
+</body>
+</html>
