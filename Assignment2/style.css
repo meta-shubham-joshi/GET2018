@@ -8,7 +8,23 @@
     margin: auto;
 }
 
-@keyframes roll{
+ @keyframes Square1{
+    0%   {top: 0px; left: 0px; }
+    25%  {top: 0px; left: 225px;  }
+    50%  {top: 225px; left: 225px; }
+    75%  {top: 225px; left: 0px;}
+    100% {top: 0px; left: 0px;}
+}
+
+ @keyframes Square2{
+    0%   {top: 0px; left: 0px;}
+    25%  {top: 225px; left: 0px; }
+    50%  {top: 225px; left: -225px; }
+    75%  {top: 0px; left: -225px;}
+    100% {top: 0px; left: 0px;}
+} 
+
+ /* @keyframes Square3{
     0%   {top: 0px; left: 0px;}
     25%  {top: 0px; left: 100px; }
     50%  {top: 100px; left: 100px; }
@@ -16,28 +32,39 @@
     100% {top: 0px; left: 0px;}
 }
 
+
+@keyframes Square4{
+    0%   {top: 0px; left: 0px;}
+    25%  {top: 0px; left: -225px; }
+    50%  {top: -225px; left: -225px; }
+    75%  {top: -225px; left: 0px;}
+    100% {top: 0px; left: 0px;}
+}      */
+
 .Square{
-    margin-left: 5px;
-    width: 220px;
-    height: 220px;
-    flex: 40%;
-    position: relative;
-    animation: roll 3s infinite; 
+    width: 225px;
+    height: 225px;
+    position: relative; 
+    opacity: .7; 
 }
 
 .Square1{
     background-color: orange;
+    animation: Square1 3s infinite;  
 }
 
 .Square2{
     background-color: blue;
+    animation: Square2 3s infinite;  
 }
 
 .Square3{
     background-color: yellow;
+    animation: Square3 3s infinite;  
 }
 
 .Square4{
     background-color: purple;
+    animation: Square4 3s infinite;  
 }
 
