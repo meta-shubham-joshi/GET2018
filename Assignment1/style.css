@@ -1,13 +1,13 @@
 body {
-background-image: url("images/bodybg.png");
+    background-image: url("images/bodybg.png");
 }
 
 .header {
-background-image: url("images/homebg.png");
-width:100%;
-height: 100%;
-border-bottom-left-radius:2%;
-border-bottom-right-radius:2%;
+    background-image: url("images/homebg.png");
+    width:100%;
+    height: 100%;
+    border-bottom-left-radius:2%;
+    border-bottom-right-radius:2%;
 }
 
 a {
@@ -19,9 +19,9 @@ a {
     padding: 5 40;
 }
 
-
 #HeaderIds{
     flex: 50%;
+    
 }
 
 .Links{
@@ -43,6 +43,7 @@ a {
 .Weather-sub{
     flex:50%;
     margin-top: 100px;
+    margin-left: 120;
 }
 
 .WeatherLink{
@@ -63,7 +64,6 @@ a {
     cursor: pointer;
 }
 
-
 .Weather-sub h1{
     font-size: 60px;
     color: white;
@@ -80,11 +80,13 @@ a {
 
 .FeaturesSub{
     display:flex;
+    margin-top: 100;
+    padding: 0 50;
 }
 
 .FeaturesSubPic{
     display:flex;
-   
+    padding: 10;
 }
 
 .FeaturesPicSize img{
@@ -96,7 +98,6 @@ a {
 }
 
 .Features h1{
-    font-size: 60px;
     color: cornflowerblue;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -130,10 +131,12 @@ a {
 
 .CloudFirst{
     display:flex;
+    margin-left: 150;
 }
 
 .CloudSubFirst{
     flex: 50%;
+    padding-top: 70;
 }
 
 .CloudSecond{
@@ -142,6 +145,8 @@ a {
 
 .CloudSecondSub{
     flex: 50%;
+    padding: 60 60;
+    margin-left: 100;
 }
 
 .Rain{
@@ -150,6 +155,8 @@ a {
 
 .RainSub{
     flex: 50%;
+    padding: 60 60;
+    margin-left: 150;
 }
 
 .Review h2{
@@ -167,50 +174,56 @@ a {
 
 .IndividualReviews{
     display:flex;
+    padding: 60 60;
 }
 
 .IndividualReviewsFlex{
     flex:50%;
+    padding: 0 150;
+}
+
+.IndividualReviewsFlex h2{
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .Promotion{
     display: flex;
-    margin-top: 150;
 }
 
 .PromotionSub{
     flex:50%;
+    margin-left: 200;
+    margin-top: 70;
 }
 
 .PromotionSub h1{
     font-size: 40px;
-    color: cornflowerblue;
+    color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .PromotionSub p{
-    font-size: 40px;
-    color: sandybrown;
+    color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .Promotion {
     background-image: url("images/homebg.png");
-    }
+}
 
-    .Footer{
-        background-color: brown;
-    }
+.Footer{
+    background-color: grey;
+}
 
 .FooterBar div {
     flex: 33%;
 }
+
 .FooterBar{
-    
     display: flex;
 }
 
 .FooterBar a {
-    
     color: black;
 }
