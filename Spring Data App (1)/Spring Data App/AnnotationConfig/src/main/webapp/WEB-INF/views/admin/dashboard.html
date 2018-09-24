@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+<title>Admin Dashboard</title>
+</head>
+<body>
+	<div class="container">
+
+		<a th:href="@{./projects/add}">ADD PROJECT</a> <a
+			th:href="@{./skills/addskill}">ADD SKILLS</a> <a
+			th:href="@{./employee/addemployee}">ADD EMPLOYEE</a> <a
+			th:href="@{./job/addjob}">ADD JOBS</a> <a th:href="@{./search}">SEARCH
+			EMPLOYEE</a>
+		<form th:action="@{/appLogout}" method="post">
+			<input type="submit" value="Logout"/>
+		</form>
+
+	</div>
+</body>
+</html>
