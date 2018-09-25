@@ -22,6 +22,7 @@ import com.metacube.training.service.JobService;
 import com.metacube.training.model.Employee;
 import com.metacube.training.model.Job;
 import com.metacube.training.model.Skill;
+import com.metacube.training.service.EmployeeRolesService;
 import com.metacube.training.service.EmployeeService;
 import com.metacube.training.service.JobDetailsService;
 import com.metacube.training.service.JobService;
@@ -47,6 +48,9 @@ public class AdminController {
 
 	@Autowired
 	private JobDetailsService jobDetailsService;
+	
+	@Autowired
+	private EmployeeRolesService employeeRolesService;
 
 //	@GetMapping("/login")
 //	public String login() {
@@ -149,6 +153,7 @@ public class AdminController {
 
 		if (employeeService.addEmployee(employee)) {
 			System.out.println("Successfully Added");
+			employeeRolesService.addEmployeeRole(employee, "EMPLOYEE");
 		} else {
 			System.out.println("Not Added Successfully");
 		}

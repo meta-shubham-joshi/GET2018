@@ -33,7 +33,7 @@ public class WelcomeController {
 	@Autowired
 	private JobDetailsService jobDetailsService;
 
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value ="/", method = RequestMethod.GET)
 	public String welcome(ModelMap model) {
 		model.addAttribute("greeting", "Hello World from Spring 4 MVC");
 		return "login";
@@ -47,7 +47,7 @@ public class WelcomeController {
 	@RequestMapping( value="/default", method=RequestMethod.GET)
 	public String afterLogin(HttpServletRequest request){
 		
-		if(request.isUserInRole("ADMIN")){
+		if(request.isUserInRole("ROLE_ADMIN")){
 			return "redirect:/admin/security";
 		}
 		return "redirect:/error";

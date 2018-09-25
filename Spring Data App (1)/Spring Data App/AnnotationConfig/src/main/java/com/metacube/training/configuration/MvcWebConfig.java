@@ -109,7 +109,7 @@ public class MvcWebConfig implements WebMvcConfigurer {
 		return transactionManager;
 	}
 
-	@Bean(name = "dataSource")
+	@Bean
 	public DataSource dataSource() {
 		DriverManagerDataSource driverManagerDataSource = new DriverManagerDataSource();
 		driverManagerDataSource.setUrl(env.getProperty(URL));
