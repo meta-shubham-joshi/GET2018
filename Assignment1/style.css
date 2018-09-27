@@ -1,41 +1,110 @@
-body {
-    background-image: url("images/bodybg.png");
+*{
+padding:0px;
+margin:0px;
 }
 
-.header {
-    background-image: url("images/homebg.png");
-    width:100%;
-    height: 100%;
-    border-bottom-left-radius:2%;
-    border-bottom-right-radius:2%;
+body {
+    background-image: url("images/bodybg.png");
 }
 
 a {
     text-decoration: none;
 }
 
-.HeaderBar{
+#header {
+    background-image: url("images/homebg.png");
     display: flex;
-    padding: 5 40;
 }
 
-#HeaderIds{
-    flex: 50%;
-    
+#header nav ul{
+    display: flex;
+    justify-content: center;
 }
 
-.Links{
+#header nav{
+    flex : 1;
+}
+
+ul a {
+
+    list-style: none;
+    text-decoration: none;
     background-color: none;
     border: none;
     color: white;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
-    cursor: pointer;
 }
 
+#cover{
+    display: flex;
+    background-image: url("images/homebg.png");
+    background-size: cover;
+    align-items: center;
+    padding-top: 50px;
+    justify-content: center;
+}
+
+li{
+    display: inline-block;
+    width: auto;
+    padding: 0 10;
+    list-style: outside none none;
+}
+
+#features{
+    /* padding: 50px 50px; */
+    width: 80%;
+    margin: auto;
+}
+
+#features h1{
+    color: cornflowerblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#features h2{
+    font-size: 20px;
+    color: sandybrown;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#features-content{
+    display: flex;
+    padding: 100px 0px;
+}
+
+.feature-info{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.feature-info img{
+    width: 80px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 .Weather{
     display: flex;
 }
@@ -70,13 +139,7 @@ a {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.Features{
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    align-items: center;
-    justify-content: center;
-}
+
 
 .FeaturesSub{
     display:flex;
@@ -97,16 +160,7 @@ a {
     flex: 50%;
 }
 
-.Features h1{
-    color: cornflowerblue;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
 
-.Features h2{
-    font-size: 20px;
-    color: sandybrown;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
 
 .FeaturesContent{
     margin-left: 15;
@@ -227,3 +281,4 @@ a {
 .FooterBar a {
     color: black;
 }
+*/
