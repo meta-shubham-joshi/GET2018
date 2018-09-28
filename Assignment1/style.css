@@ -14,6 +14,7 @@ a {
 #header {
     background-image: url("images/homebg.png");
     display: flex;
+    padding: 10px 100px;
 }
 
 #header nav ul{
@@ -41,8 +42,30 @@ ul a {
     background-image: url("images/homebg.png");
     background-size: cover;
     align-items: center;
-    padding-top: 50px;
+    padding: 70px 200px;
     justify-content: center;
+}
+
+#cover h1{
+    color: white;
+    padding: 50px 0px;
+    font-size: 80px;
+}
+
+.red{
+    background-color: #FC6A42;
+}
+
+.orange{
+    background-color: #4466C9;
+}
+
+#cover a{
+    padding: 20px 20px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    margin-right: 5px;
 }
 
 li{
@@ -52,8 +75,11 @@ li{
     list-style: outside none none;
 }
 
+#nav-links{
+    padding: 10px;
+}
+
 #features{
-    /* padding: 50px 50px; */
     width: 80%;
     margin: auto;
 }
@@ -61,6 +87,7 @@ li{
 #features h1{
     color: cornflowerblue;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 20px;
 }
 
 #features h2{
@@ -84,201 +111,124 @@ li{
     width: 80px;
 }
 
+#screenshot{
+    width: 80%;
+    margin: auto;
+}
 
+#screenshot h1{
+    color: cornflowerblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 20px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-.Weather{
+.screenshot-content{
     display: flex;
+    align-items: center;
+    padding: 100px 0px;
 }
 
-.Weather-sub{
-    flex:50%;
-    margin-top: 100px;
-    margin-left: 120;
+.screenshot-content p{
+    padding-top: 20px;
 }
 
-.WeatherLink{
+
+.screenshot-info{
+    flex: 1;
+}
+
+.screenshot-info-content{
+    padding: 30px 0px;
+}
+
+#review{
+    width: 80%;
+    margin: auto;
+}
+.review-info{
     display: flex;
-    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px 20px;
 }
 
-.Weather-sub a{
-    background-color: #4CAF50;
+#review h1{
+    text-align: center;
+    color: cornflowerblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#review h2{
+    text-align: center;
+    color: #83878D;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#promotion{
+    display: flex;
+    background-image: url("images/downloadbg.png");
+    align-items: center;
+    padding: 70px 200px 0px;
+    justify-content: center;
+}
+
+.promotion-content{
+    flex: 1;
+}
+
+.promotion-content h1{
+    color: white;
+}
+
+.promotion-content p{
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#promotion-icons{
+    padding: 30px;
+}
+
+#footer{
+    background-color:grey;
+    padding: 20px  100px;
+}
+
+#footer-top{
+    display: flex;
+    padding: 10px 20px;
+}
+
+#footer-bottom{
+    padding: 10px 20px;
+    text-align: center;
+}
+
+#footer nav ul{
+    display: flex;
+    justify-content: center;
+}
+
+#footer nav{
+    flex : 1;
+}
+
+ul a {
+
+    list-style: none;
+    text-decoration: none;
+    background-color: none;
     border: none;
     color: white;
-    padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-}
-
-.Weather-sub h1{
-    font-size: 60px;
-    color: white;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 
 
-.FeaturesSub{
-    display:flex;
-    margin-top: 100;
-    padding: 0 50;
-}
-
-.FeaturesSubPic{
-    display:flex;
-    padding: 10;
-}
-
-.FeaturesPicSize img{
-    width: 50px;
-}
-
-.FeaturesSubPic{
-    flex: 50%;
-}
 
 
 
-.FeaturesContent{
-    margin-left: 15;
-}
 
-.FeaturesPicScreen{
-    margin: 0 auto;
-    width:50%;
-} 
 
-.ScreenShots h1{
-    font-size: 40px;
-    color: cornflowerblue;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
 
-.ScreenShots h2{
-    font-size: 20px;
-    color: sandybrown;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
 
-.CloudFirst{
-    display:flex;
-    margin-left: 150;
-}
-
-.CloudSubFirst{
-    flex: 50%;
-    padding-top: 70;
-}
-
-.CloudSecond{
-    display:flex;
-}
-
-.CloudSecondSub{
-    flex: 50%;
-    padding: 60 60;
-    margin-left: 100;
-}
-
-.Rain{
-    display:flex;
-}
-
-.RainSub{
-    flex: 50%;
-    padding: 60 60;
-    margin-left: 150;
-}
-
-.Review h2{
-    font-size: 40px;
-    color: cornflowerblue;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-   
-}
-
-.Review p{
-    font-size: 20px;
-    color: black;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.IndividualReviews{
-    display:flex;
-    padding: 60 60;
-}
-
-.IndividualReviewsFlex{
-    flex:50%;
-    padding: 0 150;
-}
-
-.IndividualReviewsFlex h2{
-    color: black;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.Promotion{
-    display: flex;
-}
-
-.PromotionSub{
-    flex:50%;
-    margin-left: 200;
-    margin-top: 70;
-}
-
-.PromotionSub h1{
-    font-size: 40px;
-    color: white;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.PromotionSub p{
-    color: white;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.Promotion {
-    background-image: url("images/homebg.png");
-}
-
-.Footer{
-    background-color: grey;
-}
-
-.FooterBar div {
-    flex: 33%;
-}
-
-.FooterBar{
-    display: flex;
-}
-
-.FooterBar a {
-    color: black;
-}
-*/
