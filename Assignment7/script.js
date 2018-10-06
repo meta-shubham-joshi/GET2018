@@ -56,6 +56,9 @@ function addWebsite() {
 
     var innerDiv2Input = document.createElement('input');
     innerDiv2Input.type = 'text';
+
+    innerDiv2Input.name = "website";
+
     innerDiv2Input.placeholder = 'Website or domain name';
     innerDiv2Input.className = 'field-values';
 
@@ -89,6 +92,9 @@ function addProjectDescription() {
 
     var innerDiv2Input = document.createElement('input');
     innerDiv2Input.type = 'text';
+
+    innerDiv2Input.name = "project-description";
+
     innerDiv2Input.placeholder = 'Project Description';
     innerDiv2Input.className = 'field-values';
 
@@ -121,6 +127,10 @@ function addZipCode() {
 
     var innerDiv2Input = document.createElement('input');
     innerDiv2Input.type = 'text';
+    innerDiv2Input.id = "zipcode";
+
+    innerDiv2Input.name = "zipcode";
+
     innerDiv2Input.placeholder = 'ZipCode';
     innerDiv2Input.className = 'field-values';
 
@@ -150,6 +160,7 @@ function addHosting() {
 
     var innerDiv2Label1 = document.createElement('label');
     var innerDiv2Button1 = document.createElement('input');
+    innerDiv2Button1.name = "hosting";
     innerDiv2Button1.type = 'radio';
     innerDiv2Button1.value = 'Yes';
     var yesLabel = document.createTextNode("Yes");
@@ -158,6 +169,7 @@ function addHosting() {
 
     var innerDiv2Label2 = document.createElement('label');
     var innerDiv2Button2 = document.createElement('input');
+    innerDiv2Button2.name = "hosting";
     innerDiv2Button2.type = 'radio';
     innerDiv2Button2.value = 'No';
     var noLabel = document.createTextNode("No");
@@ -174,35 +186,52 @@ function addHosting() {
 
 }
 
+var errorMessage = "";
+
 function validate() {
 
-    if (validateName() && validateEmail() && validatePhone() && validateZipCode()) {
-        return true;
+    validateFirstName()
+    validateLastName()
+    validateEmail()
+    validatePhone()
+
+    if (!(document.getElementById("select-state").value == "Rajasthan")) {
+        validateZipCode()
     }
 
-    return false;
+    if (!(errorMessage == "")) {
+        alert(errorMessage);
+        document.myform.focus();
+        return false;
+    }
+    return true;
 }
 
-function validateName() {
+function validateFirstName() {
 
     var re = /^[A-Za-z]+$/;
     var firstName = document.getElementById("first-name").value;
-    var lastName = document.getElementById("last-name").value;
 
     if ((firstName.length > 2 && re.test(firstName))) {
-
-        if ((lastName.length > 2 && re.test(lastName))) {
-            return true;
-        }
-        else {
-            alert("Please Enter Valid Last Name!!..");
-            document.myform.lastName.focus();
-            return false;
-        }
+        return true;
     }
     else {
-        alert("Please Enter Valid First Name!!..");
-        document.myform.firstName.focus();
+        errorMessage = errorMessage + "First Name : Please enter valid first name.\n";
+        return false;
+    }
+
+}
+
+function validateLastName() {
+
+    var re = /^[A-Za-z]+$/;
+    var lastName = document.getElementById("last-name").value;
+
+    if ((lastName.length > 2 && re.test(lastName))) {
+        return true;
+    }
+    else {
+        errorMessage = errorMessage + "Last Name : Please enter valid last name.\n";
         return false;
     }
 
@@ -217,8 +246,7 @@ function validateEmail() {
         return true;
     }
     else {
-        alert("Please Enter Valid E-Mail Address!!..");
-        document.myform.email.focus();
+        errorMessage = errorMessage + "Email : Please enter valid email address.\n";
         return false;
     }
 
@@ -232,8 +260,7 @@ function validatePhone() {
         return true;
     }
     else {
-        alert("Please Enter Valid Phone Number!!..");
-        document.myform.phone.focus();
+        errorMessage = errorMessage + "Contact : Please enter valid contact number.\n";
         return false;
     }
 
@@ -247,9 +274,42 @@ function validateZipCode() {
         return true;
     }
     else {
-        alert("Please Enter Valid ZipCode!!..");
-        document.myform.zipcode.focus();
+        errorMessage = errorMessage + "ZipCode : Please enter valid ZipCode.\n";
         return false;
     }
 
 }
+
+function getProfileData() {
+    var urlString = window.location;
+    var url = new URL(urlString);
+    var state = url.searchParams.get("state");
+
+    document.getElementById("name").innerHTML = url.searchParams.get("FirstName") + " " + url.searchParams.get("LastName");
+    document.getElementById("email").innerHTML = url.searchParams.get("Email");
+    document.getElementById("city").innerHTML = url.searchParams.get("city");
+    document.getElementById("phone").innerHTML = url.searchParams.get("phone");
+    document.getElementById("address").innerHTML = url.searchParams.get("address");
+    document.getElementById("state").innerHTML = state;
+
+    if (state == "Haryana") {
+        document.getElementById("label-1").innerHTML = "Zipcode:";
+        document.getElementById("label-1-content").innerHTML = url.searchParams.get("zipcode");
+        document.getElementById("label-2").innerHTML = "Have Hosting:";
+        document.getElementById("label-2-content").innerHTML = url.searchParams.get("hosting");
+    }
+    if (state == "Rajasthan") {
+        document.getElementById("label-1").innerHTML = "Website:";
+        document.getElementById("label-1-content").innerHTML = url.searchParams.get("website");
+        document.getElementById("label-2").innerHTML = "Project Description:";
+        document.getElementById("label-2-content").innerHTML = url.searchParams.get("project-description");
+    }
+    if (state == "Maharashtra") {
+        document.getElementById("label-1").innerHTML = "Zipcode:";
+        document.getElementById("label-1-content").innerHTML = url.searchParams.get("zipcode");
+        document.getElementById("label-2").innerHTML = "Project Description:";
+        document.getElementById("label-2-content").innerHTML = url.searchParams.get("project-description");
+    }
+}
+
+
