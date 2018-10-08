@@ -1,0 +1,234 @@
+*{
+padding:0px;
+margin:0px;
+}
+
+body {
+    background-image: url("images/bodybg.png");
+}
+
+a {
+    text-decoration: none;
+}
+
+#header {
+    background-image: url("images/homebg.png");
+    display: flex;
+    padding: 10px 100px;
+}
+
+#header nav ul{
+    display: flex;
+    justify-content: center;
+}
+
+#header nav{
+    flex : 1;
+}
+
+ul a {
+
+    list-style: none;
+    text-decoration: none;
+    background-color: none;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+#cover{
+    display: flex;
+    background-image: url("images/homebg.png");
+    background-size: cover;
+    align-items: center;
+    padding: 70px 200px;
+    justify-content: center;
+}
+
+#cover h1{
+    color: white;
+    padding: 50px 0px;
+    font-size: 80px;
+}
+
+.red{
+    background-color: #FC6A42;
+}
+
+.orange{
+    background-color: #4466C9;
+}
+
+#cover a{
+    padding: 20px 20px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+li{
+    display: inline-block;
+    width: auto;
+    padding: 0 10;
+    list-style: outside none none;
+}
+
+#nav-links{
+    padding: 10px;
+}
+
+#features{
+    width: 80%;
+    margin: auto;
+}
+
+#features h1{
+    color: cornflowerblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 20px;
+}
+
+#features h2{
+    font-size: 20px;
+    color: sandybrown;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#features-content{
+    display: flex;
+    padding: 100px 0px;
+}
+
+.feature-info{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.feature-info img{
+    width: 80px;
+}
+
+#screenshot{
+    width: 80%;
+    margin: auto;
+}
+
+#screenshot h1{
+    color: cornflowerblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 20px;
+}
+
+.screenshot-content{
+    display: flex;
+    align-items: center;
+    padding: 100px 0px;
+}
+
+.screenshot-content p{
+    padding-top: 20px;
+}
+
+
+.screenshot-info{
+    flex: 1;
+}
+
+.screenshot-info-content{
+    padding: 30px 0px;
+}
+
+#review{
+    width: 80%;
+    margin: auto;
+}
+.review-info{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 20px;
+}
+
+#review h1{
+    text-align: center;
+    color: cornflowerblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#review h2{
+    text-align: center;
+    color: #83878D;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#promotion{
+    display: flex;
+    background-image: url("images/downloadbg.png");
+    align-items: center;
+    padding: 70px 200px 0px;
+    justify-content: center;
+}
+
+.promotion-content{
+    flex: 1;
+}
+
+.promotion-content h1{
+    color: white;
+}
+
+.promotion-content p{
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#promotion-icons{
+    padding: 30px;
+}
+
+#footer{
+    background-color:grey;
+    padding: 20px  100px;
+}
+
+#footer-top{
+    display: flex;
+    padding: 10px 20px;
+}
+
+#footer-bottom{
+    padding: 10px 20px;
+    text-align: center;
+}
+
+#footer nav ul{
+    display: flex;
+    justify-content: center;
+}
+
+#footer nav{
+    flex : 1;
+}
+
+ul a {
+
+    list-style: none;
+    text-decoration: none;
+    background-color: none;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
