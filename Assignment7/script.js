@@ -298,13 +298,13 @@ function getProfileData() {
         document.getElementById("label-2").innerHTML = "Have Hosting:";
         document.getElementById("label-2-content").innerHTML = url.searchParams.get("hosting");
     }
-    if (state == "Rajasthan") {
+    else if (state == "Rajasthan") {
         document.getElementById("label-1").innerHTML = "Website:";
         document.getElementById("label-1-content").innerHTML = url.searchParams.get("website");
         document.getElementById("label-2").innerHTML = "Project Description:";
         document.getElementById("label-2-content").innerHTML = url.searchParams.get("project-description");
     }
-    if (state == "Maharashtra") {
+    else {
         document.getElementById("label-1").innerHTML = "Zipcode:";
         document.getElementById("label-1-content").innerHTML = url.searchParams.get("zipcode");
         document.getElementById("label-2").innerHTML = "Project Description:";
