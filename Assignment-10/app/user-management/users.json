@@ -1,0 +1,52 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "name": "Vaibhav",
+      "phone": "9876543210",
+      "city": "jaipur"
+    },
+    {
+      "id": 2,
+      "name": "Jitendra",
+      "phone": "976543210",
+      "city": "Pune"
+    },
+    {
+      "id": 3,
+      "name": "Ram Ji",
+      "phone": "9876543210",
+      "city": "Mumbai"
+    },
+    {
+      "name": "Shubh",
+      "phone": "9876543210",
+      "city": "Bangalore",
+      "id": 4
+    },
+    {
+      "name": "Komal",
+      "phone": "9876543210",
+      "city": "Hyderabad",
+      "id": 5
+    },
+    {
+      "name": "Mayank",
+      "phone": "798579454",
+      "city": "lfdhg;lfdfg",
+      "id": 6
+    },
+    {
+      "name": "Employe1",
+      "phone": "8290526163",
+      "city": "sdhkshdksad",
+      "id": 7
+    },
+    {
+      "name": "java",
+      "phone": "8290526163",
+      "city": "ffulf",
+      "id": 8
+    }
+  ]
+}
