@@ -1,0 +1,168 @@
+<html>
+
+<head>
+    <title>HTML5 FORM</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <div>
+        <h1>Contact Us Today!</h1>
+    </div>
+
+    <div>
+
+        <form id="registration-form"  name="myform" action='profile.html'>
+
+            <div class='field'>
+
+                <div class='field-label'>
+                    FirstName:
+                </div>
+
+                <div class='field-inputs'>
+
+                    <i id="icons" class="fa fa-user icon"></i>
+
+                    <input class='field-values' type='text' id='first-name' name='FirstName' placeholder='First Name'
+                        required>
+                    <br>
+                    <br>
+
+                </div>
+
+            </div>
+
+            <div class='field'>
+
+                <div class='field-label'>
+                    LastName:
+                </div>
+
+                <div class='field-inputs'>
+
+                    <i id="icons" class="fa fa-user icon"></i>
+
+                    <input class='field-values' type='text' id='last-name' name='LastName' placeholder='Last Name'
+                        required>
+                    <br>
+                    <br>
+                </div>
+
+            </div>
+
+            <div class='field'>
+
+                <div class='field-label'>
+                    Email:
+                </div>
+
+                <div class='field-inputs'>
+
+                    <i id="icons" class="fas fa-envelope-square"></i>
+
+                    <input class='field-values' type='text' id='email' name='Email' placeholder='E-Mail Address'
+                        required>
+                    <br>
+                    <br>
+                </div>
+
+            </div>
+
+            <div class='field'>
+
+                <div class='field-label'>
+                    Phone:
+                </div>
+
+                <div class='field-inputs'>
+
+                    <i id="icons" class="fas fa-phone-square"></i>
+
+                    <input class='field-values' type='text' id='phone' name='phone' placeholder="(845)555-1212"
+                        required>
+                    <br>
+                    <br>
+                </div>
+
+            </div>
+
+            <div class='field'>
+
+                <div class='field-label'>
+                    Address:
+                </div>
+
+                <div class='field-inputs'>
+
+                    <i id="icons" class="fas fa-home"></i>
+
+                    <input class='field-values' type='text' id='address' name='address' placeholder='Address' required>
+                    <br>
+                    <br>
+                </div>
+
+            </div>
+
+            <div class='field'>
+
+                <div class='field-label'>
+                    City:
+                </div>
+
+                <div class='field-inputs'>
+
+                    <i id="icons" class="fas fa-home"></i>
+
+                    <input class='field-values' type='text' id='city' name='city' placeholder='City' required>
+                    <br>
+                    <br>
+                </div>
+
+            </div>
+
+            <div class='field'>
+
+                <div class='field-label'>
+                    State:
+                </div>
+
+                <div class='field-inputs'>
+
+                    <i id="icons" class="fa fa-list-ul icon"></i>
+
+                    <select class='field-values' id='select-state' onchange="myFunction()">
+                        <option selected disabled>Please select a state</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Haryana">Haryana</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                    </select>
+                    <br>
+                    <br>
+                </div>
+
+            </div>
+
+            <div class='field' id="submit-button-div">
+
+                <div id='field-button'>
+
+                    <button class="button" onclick="return validate()">Send
+                        <i class="fab fa-telegram-plane"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
