@@ -1,0 +1,93 @@
+{
+  "users": [
+    {
+      "id": 3,
+      "name": "Dipanshu Sharma",
+      "phone": 658765496,
+      "city": "Jaipur"
+    },
+    {
+      "id": 4,
+      "name": "Richa",
+      "phone": 278527868,
+      "city": "Jaipur"
+    },
+    {
+      "name": "Jitendra",
+      "phone": "658654",
+      "city": "Jaipur",
+      "id": 5
+    },
+    {
+      "name": "Jitendra Chandwani",
+      "phone": "658654",
+      "city": "Jaipur",
+      "id": 6
+    },
+    {
+      "name": "Jitendra",
+      "phone": "658654",
+      "city": "Jaipur",
+      "id": 7
+    },
+    {
+      "name": "Komal Khatri",
+      "phone": "87659846",
+      "city": "Udaipur",
+      "id": 9
+    },
+    {
+      "name": "jitendaracsaoifh ",
+      "phone": "njahlsah8u9",
+      "id": 10
+    },
+    {
+      "name": "Nikhil",
+      "phone": "798675637",
+      "city": "Alwar",
+      "id": 11
+    },
+    {
+      "username": "shubham",
+      "userphone": "8290526163",
+      "usercity": "Bhilwara",
+      "id": 12
+    },
+    {
+      "username": "shubham",
+      "userphone": "8290526163",
+      "usercity": "Bhilwara",
+      "id": 13
+    },
+    {
+      "name": "vaibhav",
+      "phone": "6965",
+      "city": "Bhilwara",
+      "id": 15
+    },
+    {
+      "name": "RahulChirag",
+      "phone": "8290526163",
+      "city": "Bhilwara",
+      "id": 18
+    },
+    {
+      "name": "Namrata",
+      "phone": "68465425",
+      "city": "Bhilwara",
+      "id": 20
+    },
+    {
+      "name": "Prakalpa Rathore",
+      "phone": "69698698",
+      "city": "Bhilwara",
+      "id": 21
+    },
+    {
+      "name": "Ramjilal Jitu",
+      "phone": "8290526163",
+      "city": "Bhilwara",
+      "id": 22
+    }
+  ]
+}
